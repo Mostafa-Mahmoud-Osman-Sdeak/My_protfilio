@@ -1,0 +1,4109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Portfolio of Mostafa Mahmoud Osman Sdeak, AI & Machine Learning Engineer specializing in Machine Learning, Deep Learning, Computer Vision, NLP, and Generative AI.">
+
+    <title>
+        Mostafa Mahmoud Osman Sdeak | AI & Machine Learning Engineer
+    </title>
+
+
+    <!-- =========================
+         GOOGLE FONT
+    ========================== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <!-- =========================
+         FONT AWESOME
+    ========================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+    <!-- =========================
+         CSS
+    ========================== -->
+
+    <style>
+
+        /* =========================================
+           ROOT VARIABLES
+        ========================================= */
+
+        :root {
+
+            --bg: #0b0b0f;
+
+            --bg-secondary: #101017;
+
+            --card-bg: rgba(255, 255, 255, 0.04);
+
+            --card-hover: rgba(255, 255, 255, 0.06);
+
+            --primary: #8b5cf6;
+
+            --primary-hover: #7c3aed;
+
+            --primary-light: #a78bfa;
+
+            --text-main: #f3f4f6;
+
+            --text-muted: #9ca3af;
+
+            --border: rgba(255, 255, 255, 0.08);
+
+            --green: #10b981;
+
+            --yellow: #f59e0b;
+
+            --radius-lg: 18px;
+
+            --radius-md: 12px;
+
+            --transition:
+                all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+
+        /* =========================================
+           RESET
+        ========================================= */
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+            box-sizing: border-box;
+        }
+
+
+        html {
+
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            font-family:
+                "Plus Jakarta Sans",
+                sans-serif;
+
+            background: var(--bg);
+
+            color: var(--text-main);
+
+            line-height: 1.7;
+
+            overflow-x: hidden;
+        }
+
+
+        a {
+
+            color: inherit;
+
+            text-decoration: none;
+        }
+
+
+        img {
+
+            max-width: 100%;
+
+            display: block;
+        }
+
+
+        button,
+        input,
+        textarea {
+
+            font-family: inherit;
+        }
+
+
+        /* =========================================
+           BACKGROUND GLOW
+        ========================================= */
+
+        .glow {
+
+            position: fixed;
+
+            width: 500px;
+
+            height: 500px;
+
+            border-radius: 50%;
+
+            filter: blur(150px);
+
+            opacity: 0.08;
+
+            pointer-events: none;
+
+            z-index: -1;
+        }
+
+
+        .glow-1 {
+
+            background: #8b5cf6;
+
+            top: -200px;
+
+            left: -200px;
+        }
+
+
+        .glow-2 {
+
+            background: #2563eb;
+
+            bottom: -200px;
+
+            right: -200px;
+        }
+
+
+        /* =========================================
+           CONTAINER
+        ========================================= */
+
+        .container {
+
+            width: min(1150px, 92%);
+
+            margin: auto;
+        }
+
+
+        /* =========================================
+           NAVBAR
+        ========================================= */
+
+        header {
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            backdrop-filter: blur(15px);
+
+            background:
+                rgba(11, 11, 15, 0.88);
+
+            border-bottom:
+                1px solid rgba(255,255,255,0.06);
+        }
+
+
+        nav {
+
+            min-height: 75px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+        }
+
+
+        .logo {
+
+            font-size: 22px;
+
+            font-weight: 800;
+
+            letter-spacing: -0.5px;
+        }
+
+
+        .logo span {
+
+            color: var(--primary);
+        }
+
+
+        .nav-links {
+
+            display: flex;
+
+            gap: 26px;
+
+            list-style: none;
+        }
+
+
+        .nav-links a {
+
+            color: var(--text-muted);
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            transition: var(--transition);
+        }
+
+
+        .nav-links a:hover {
+
+            color: white;
+        }
+
+
+        .menu-toggle {
+
+            display: none;
+
+            border: none;
+
+            background: transparent;
+
+            color: white;
+
+            font-size: 24px;
+
+            cursor: pointer;
+        }
+
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .hero {
+
+            min-height: 90vh;
+
+            display: grid;
+
+            grid-template-columns:
+                1.3fr
+                0.7fr;
+
+            align-items: center;
+
+            gap: 60px;
+
+            padding: 90px 0;
+        }
+
+
+        .hero-small {
+
+            color: var(--primary-light);
+
+            font-size: 16px;
+
+            font-weight: 700;
+
+            margin-bottom: 12px;
+        }
+
+
+        .hero h1 {
+
+            font-size:
+                clamp(38px, 6vw, 68px);
+
+            line-height: 1.05;
+
+            letter-spacing: -2px;
+
+            margin-bottom: 18px;
+        }
+
+
+        .hero h2 {
+
+            font-size:
+                clamp(22px, 3vw, 34px);
+
+            color: var(--primary);
+
+            margin-bottom: 22px;
+        }
+
+
+        .hero p {
+
+            color: var(--text-muted);
+
+            max-width: 700px;
+
+            font-size: 17px;
+
+            margin-bottom: 30px;
+        }
+
+
+        /* =========================================
+           BUTTONS
+        ========================================= */
+
+        .hero-buttons {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .btn {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 9px;
+
+            padding: 13px 20px;
+
+            border-radius: 10px;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            transition: var(--transition);
+
+            cursor: pointer;
+        }
+
+
+        .btn-primary {
+
+            background: var(--primary);
+
+            color: white;
+        }
+
+
+        .btn-primary:hover {
+
+            background:
+                var(--primary-hover);
+
+            transform:
+                translateY(-2px);
+        }
+
+
+        .btn-outline {
+
+            border:
+                1px solid
+                rgba(255,255,255,0.15);
+
+            color: white;
+
+            background:
+                rgba(255,255,255,0.03);
+        }
+
+
+        .btn-outline:hover {
+
+            border-color:
+                var(--primary);
+
+            color:
+                var(--primary);
+
+            transform:
+                translateY(-2px);
+        }
+
+
+        /* =========================================
+           SOCIAL BUTTONS
+        ========================================= */
+
+        .social-buttons {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+        }
+
+
+        .social-btn {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 10px 15px;
+
+            border:
+                1px solid
+                rgba(255,255,255,0.1);
+
+            border-radius: 10px;
+
+            color: var(--text-muted);
+
+            background:
+                rgba(255,255,255,0.03);
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            transition: var(--transition);
+        }
+
+
+        .social-btn:hover {
+
+            color: white;
+
+            border-color:
+                var(--primary);
+
+            transform:
+                translateY(-2px);
+        }
+
+
+        .social-btn i {
+
+            font-size: 16px;
+        }
+
+
+        /* =========================================
+           HERO IMAGE
+        ========================================= */
+
+        .hero-image-wrapper {
+
+            display: flex;
+
+            justify-content: center;
+        }
+
+
+        .hero-image {
+
+            width: 300px;
+
+            height: 300px;
+
+            object-fit: cover;
+
+            object-position: center;
+
+            border-radius: 50%;
+
+            border:
+                4px solid
+                rgba(139,92,246,0.45);
+
+            box-shadow:
+                0 0 60px
+                rgba(139,92,246,0.18);
+
+            transition:
+                var(--transition);
+        }
+
+
+        .hero-image:hover {
+
+            transform: scale(1.03);
+
+            border-color:
+                var(--primary);
+        }
+
+
+        /* =========================================
+           SECTIONS
+        ========================================= */
+
+        section {
+
+            padding: 90px 0;
+
+            scroll-margin-top: 80px;
+        }
+
+
+        .section-title {
+
+            margin-bottom: 45px;
+        }
+
+
+        .section-title span {
+
+            color: var(--primary);
+
+            font-size: 14px;
+
+            font-weight: 800;
+
+            text-transform: uppercase;
+
+            letter-spacing: 2px;
+        }
+
+
+        .section-title h2 {
+
+            font-size: 36px;
+
+            margin-top: 7px;
+        }
+
+
+        /* =========================================
+           CARDS
+        ========================================= */
+
+        .card {
+
+            background:
+                var(--card-bg);
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                var(--radius-lg);
+
+            padding: 28px;
+
+            transition:
+                var(--transition);
+        }
+
+
+        .card:hover {
+
+            transform:
+                translateY(-5px);
+
+            border-color:
+                rgba(139,92,246,0.35);
+
+            background:
+                var(--card-hover);
+
+            box-shadow:
+                0 15px 40px
+                rgba(0,0,0,0.25);
+        }
+
+
+        .card h3 {
+
+            margin-bottom: 10px;
+        }
+
+
+        .card p {
+
+            color: var(--text-muted);
+        }
+
+
+        /* =========================================
+           ABOUT
+        ========================================= */
+
+        .about-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1.3fr
+                0.7fr;
+
+            gap: 25px;
+        }
+
+
+        .about-main p {
+
+            color: var(--text-muted);
+
+            margin-bottom: 18px;
+        }
+
+
+        .about-list {
+
+            display: grid;
+
+            gap: 15px;
+        }
+
+
+        .about-list div {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            color:
+                var(--text-muted);
+        }
+
+
+        .about-list i {
+
+            color:
+                var(--primary);
+
+            width: 20px;
+        }
+
+
+        /* =========================================
+           TAGS
+        ========================================= */
+
+        .tags {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+            margin-top: 18px;
+        }
+
+
+        .tag {
+
+            padding:
+                6px 10px;
+
+            border-radius: 8px;
+
+            background:
+                rgba(139,92,246,0.1);
+
+            border:
+                1px solid
+                rgba(139,92,246,0.18);
+
+            color:
+                #c4b5fd;
+
+            font-size: 12px;
+
+            font-weight: 600;
+        }
+
+
+        /* =========================================
+           EDUCATION
+        ========================================= */
+
+        .education-card .institution {
+
+            color:
+                var(--primary);
+
+            font-weight: 700;
+
+            margin-bottom: 5px;
+        }
+
+
+        .education-card h3 {
+
+            font-size: 22px;
+        }
+
+
+        .education-card .date {
+
+            color:
+                var(--text-muted);
+
+            font-size: 13px;
+        }
+
+
+        /* =========================================
+           TRAINING
+        ========================================= */
+
+        .training-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .training-card h3 {
+
+            font-size: 19px;
+        }
+
+
+        .training-card .provider {
+
+            color:
+                var(--primary);
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            margin: 7px 0;
+        }
+
+
+        .badge {
+
+            display: inline-block;
+
+            padding:
+                5px 9px;
+
+            border-radius: 7px;
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            margin-top: 10px;
+        }
+
+
+        .badge.completed {
+
+            background:
+                rgba(16,185,129,0.12);
+
+            color:
+                #34d399;
+        }
+
+
+        .badge.progress {
+
+            background:
+                rgba(245,158,11,0.12);
+
+            color:
+                #fbbf24;
+        }
+
+
+        /* =========================================
+           SKILLS
+        ========================================= */
+
+        .skills-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .skill-card h3 {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+        }
+
+
+        .skill-card h3 i {
+
+            color:
+                var(--primary);
+        }
+
+
+        /* =========================================
+           PROJECTS
+        ========================================= */
+
+        .projects-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 25px;
+        }
+
+
+        .project-card {
+
+            display: flex;
+
+            flex-direction: column;
+        }
+
+
+        .project-icon {
+
+            width: 50px;
+
+            height: 50px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 12px;
+
+            background:
+                rgba(139,92,246,0.12);
+
+            color:
+                var(--primary);
+
+            font-size: 22px;
+
+            margin-bottom: 18px;
+        }
+
+
+        .project-card h3 {
+
+            font-size: 21px;
+        }
+
+
+        .project-card p {
+
+            margin:
+                10px 0 18px;
+        }
+
+
+        .project-footer {
+
+            margin-top: auto;
+        }
+
+
+        /* =========================================
+           CERTIFICATES
+        ========================================= */
+
+        .certificates-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 18px;
+        }
+
+
+        .certificate-card {
+
+            cursor: pointer;
+
+            overflow: hidden;
+
+            background:
+                var(--card-bg);
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 14px;
+
+            transition:
+                var(--transition);
+        }
+
+
+        .certificate-card:hover {
+
+            transform:
+                translateY(-5px);
+
+            border-color:
+                rgba(139,92,246,0.4);
+        }
+
+
+        .certificate-image {
+
+            width: 100%;
+
+            aspect-ratio: 16 / 10;
+
+            object-fit: cover;
+
+            background:
+                #15151b;
+        }
+
+
+        .certificate-info {
+
+            padding: 15px;
+        }
+
+
+        .certificate-info h3 {
+
+            font-size: 14px;
+
+            line-height: 1.4;
+        }
+
+
+        .certificate-info p {
+
+            color:
+                var(--text-muted);
+
+            font-size: 12px;
+
+            margin-top: 5px;
+        }
+
+
+        /* =========================================
+           EXPERIENCE
+        ========================================= */
+
+        .experience {
+
+            display: grid;
+
+            gap: 20px;
+        }
+
+
+        .experience-card {
+
+            position: relative;
+
+            padding-left: 30px;
+        }
+
+
+        .experience-card::before {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+
+            top: 30px;
+
+            width: 8px;
+
+            height: 8px;
+
+            background:
+                var(--primary);
+
+            border-radius: 50%;
+
+            box-shadow:
+                0 0 0 5px
+                rgba(139,92,246,0.1);
+        }
+
+
+        .experience-card h3 {
+
+            font-size: 20px;
+        }
+
+
+        .experience-card .role {
+
+            color:
+                var(--primary);
+
+            font-weight: 700;
+
+            margin:
+                5px 0 12px;
+        }
+
+
+        .experience-card ul {
+
+            padding-left: 18px;
+
+            color:
+                var(--text-muted);
+        }
+
+
+        .experience-card li {
+
+            margin-bottom: 6px;
+        }
+
+
+        /* =========================================
+           CONTACT
+        ========================================= */
+
+        .contact-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                0.8fr
+                1.2fr;
+
+            gap: 25px;
+        }
+
+
+        .contact-info {
+
+            display: grid;
+
+            gap: 15px;
+        }
+
+
+        .contact-item {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 14px;
+
+            padding: 15px;
+
+            border-radius: 12px;
+
+            background:
+                rgba(255,255,255,0.03);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.06);
+
+            transition:
+                var(--transition);
+        }
+
+
+        .contact-item:hover {
+
+            border-color:
+                var(--primary);
+
+            transform:
+                translateY(-2px);
+        }
+
+
+        .contact-item i {
+
+            width: 40px;
+
+            height: 40px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 10px;
+
+            background:
+                rgba(139,92,246,0.1);
+
+            color:
+                var(--primary);
+        }
+
+
+        .contact-item small {
+
+            display: block;
+
+            color:
+                var(--text-muted);
+
+            font-size: 11px;
+        }
+
+
+        .contact-item strong {
+
+            font-size: 13px;
+
+            word-break: break-word;
+        }
+
+
+        .contact-form {
+
+            display: grid;
+
+            gap: 14px;
+        }
+
+
+        .form-group {
+
+            display: grid;
+
+            gap: 7px;
+        }
+
+
+        .form-group label {
+
+            font-size: 13px;
+
+            font-weight: 600;
+        }
+
+
+        .form-group input,
+        .form-group textarea {
+
+            width: 100%;
+
+            padding:
+                13px 15px;
+
+            border-radius: 10px;
+
+            border:
+                1px solid
+                rgba(255,255,255,0.1);
+
+            background:
+                rgba(255,255,255,0.03);
+
+            color: white;
+
+            outline: none;
+
+            transition:
+                var(--transition);
+        }
+
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+
+            border-color:
+                var(--primary);
+
+            box-shadow:
+                0 0 0 3px
+                rgba(139,92,246,0.08);
+        }
+
+
+        .form-group textarea {
+
+            min-height: 150px;
+
+            resize: vertical;
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+
+            padding:
+                30px 0;
+
+            border-top:
+                1px solid
+                rgba(255,255,255,0.06);
+
+            text-align:
+                center;
+
+            color:
+                var(--text-muted);
+
+            font-size: 13px;
+        }
+
+
+        /* =========================================
+           MODAL / LIGHTBOX
+        ========================================= */
+
+        .modal {
+
+            position: fixed;
+
+            inset: 0;
+
+            background:
+                rgba(0,0,0,0.93);
+
+            z-index: 2000;
+
+            display: none;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 30px;
+        }
+
+
+        .modal.active {
+
+            display: flex;
+        }
+
+
+        .modal-content {
+
+            position: relative;
+
+            max-width: 1000px;
+
+            max-height: 90vh;
+        }
+
+
+        .modal-content img {
+
+            max-width: 100%;
+
+            max-height: 85vh;
+
+            object-fit: contain;
+
+            border-radius: 10px;
+
+            transition:
+                transform 0.25s ease;
+        }
+
+
+        .modal-close {
+
+            position: absolute;
+
+            top: -45px;
+
+            right: 0;
+
+            border: none;
+
+            background: transparent;
+
+            color: white;
+
+            font-size: 30px;
+
+            cursor: pointer;
+        }
+
+
+        .zoom-controls {
+
+            position: absolute;
+
+            bottom: -50px;
+
+            left: 50%;
+
+            transform:
+                translateX(-50%);
+
+            display: flex;
+
+            gap: 8px;
+        }
+
+
+        .zoom-controls button {
+
+            width: 38px;
+
+            height: 38px;
+
+            border:
+                1px solid
+                rgba(255,255,255,0.15);
+
+            border-radius: 8px;
+
+            background:
+                #17171d;
+
+            color: white;
+
+            cursor: pointer;
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 992px) {
+
+            .hero {
+
+                grid-template-columns: 1fr;
+
+                text-align: center;
+            }
+
+
+            .hero p {
+
+                margin-left: auto;
+
+                margin-right: auto;
+            }
+
+
+            .hero-buttons,
+            .social-buttons {
+
+                justify-content: center;
+            }
+
+
+            .hero-image-wrapper {
+
+                order: -1;
+            }
+
+
+            .about-grid,
+            .contact-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .certificates-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+        }
+
+
+        @media (max-width: 768px) {
+
+            .menu-toggle {
+
+                display: block;
+            }
+
+
+            .nav-links {
+
+                position: absolute;
+
+                top: 75px;
+
+                left: 0;
+
+                right: 0;
+
+                display: none;
+
+                flex-direction: column;
+
+                gap: 0;
+
+                padding: 15px;
+
+                background:
+                    rgba(11,11,15,0.98);
+
+                border-bottom:
+                    1px solid
+                    rgba(255,255,255,0.08);
+            }
+
+
+            .nav-links.active {
+
+                display: flex;
+            }
+
+
+            .nav-links li {
+
+                padding: 10px 0;
+            }
+
+
+            .training-grid,
+            .skills-grid,
+            .projects-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .certificates-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .hero {
+
+                padding-top: 60px;
+            }
+
+
+            section {
+
+                padding: 70px 0;
+            }
+        }
+
+
+        @media (max-width: 500px) {
+
+            .hero h1 {
+
+                font-size: 40px;
+            }
+
+
+            .hero-image {
+
+                width: 230px;
+
+                height: 230px;
+            }
+
+
+            .hero-buttons {
+
+                flex-direction: column;
+            }
+
+
+            .btn {
+
+                width: 100%;
+            }
+
+
+            .social-buttons {
+
+                flex-direction: column;
+            }
+
+
+            .social-btn {
+
+                justify-content: center;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         BACKGROUND
+    ========================================== -->
+
+    <div class="glow glow-1"></div>
+
+    <div class="glow glow-2"></div>
+
+
+
+    <!-- =========================================
+         NAVBAR
+    ========================================== -->
+
+    <header>
+
+        <div class="container">
+
+            <nav>
+
+                <a
+                    href="#home"
+                    class="logo">
+
+                    Mostafa<span>Sdeak</span>
+
+                </a>
+
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Open Menu">
+
+                    <i class="fas fa-bars"></i>
+
+                </button>
+
+
+                <ul
+                    class="nav-links"
+                    id="navLinks">
+
+                    <li>
+                        <a href="#home">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#about">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#education">
+                            Education
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#training">
+                            Training
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#skills">
+                            Skills
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#projects">
+                            Projects
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#certificates">
+                            Certificates
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#experience">
+                            Experience
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#contact">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <main>
+
+
+        <!-- =========================================
+             HERO
+        ========================================== -->
+
+        <section
+            class="hero container"
+            id="home">
+
+
+            <div class="hero-content">
+
+
+                <div class="hero-small">
+
+                    Hello, I'm
+
+                </div>
+
+
+                <h1>
+
+                    Mostafa Mahmoud
+                    Osman Sdeak
+
+                </h1>
+
+
+                <h2>
+
+                    AI & Machine Learning Engineer
+
+                </h2>
+
+
+                <p>
+
+                    Building intelligent solutions with
+                    Machine Learning, Deep Learning,
+                    Computer Vision, NLP, and
+                    Generative AI.
+
+                </p>
+
+
+                <!-- Main Buttons -->
+
+                <div class="hero-buttons">
+
+
+                    <a
+                        href="cv.pdf"
+                        class="btn btn-primary"
+                        download>
+
+                        <i class="fas fa-download"></i>
+
+                        Download CV
+
+                    </a>
+
+
+                    <a
+                        href="#projects"
+                        class="btn btn-outline">
+
+                        <i class="fas fa-code"></i>
+
+                        View Projects
+
+                    </a>
+
+
+                    <a
+                        href="#contact"
+                        class="btn btn-outline">
+
+                        <i class="fas fa-envelope"></i>
+
+                        Contact Me
+
+                    </a>
+
+                </div>
+
+
+                <!-- Social Accounts -->
+
+                <div class="social-buttons">
+
+
+                    <!-- GitHub -->
+
+                    <a
+                        href="https://github.com/Mostafa-Mahmoud-Osman-Sdeak"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="social-btn">
+
+                        <i class="fab fa-github"></i>
+
+                        GitHub
+
+                    </a>
+
+
+                    <!-- CORRECT LINKEDIN -->
+
+                    <a
+                        href="https://www.linkedin.com/in/mostafa-mahmoud-osman-426b7933b/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="social-btn">
+
+                        <i class="fab fa-linkedin"></i>
+
+                        LinkedIn
+
+                    </a>
+
+
+                    <!-- Email -->
+
+                    <a
+                        href="mailto:mostafa.mahmoud.osman.sdeak@gmail.com"
+                        class="social-btn">
+
+                        <i class="fas fa-envelope"></i>
+
+                        Email
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Profile Image -->
+
+            <div class="hero-image-wrapper">
+
+                <img
+                    id="profileImage"
+                    class="hero-image"
+                    src="photo_me/IMG-20260626-WA0083 (1).jpg"
+                    alt="Mostafa Mahmoud Osman Sdeak">
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================================
+             ABOUT
+        ========================================== -->
+
+        <section id="about">
+
+            <div class="container">
+
+
+                <div class="section-title">
+
+                    <span>
+                        About Me
+                    </span>
+
+                    <h2>
+                        Who I Am
+                    </h2>
+
+                </div>
+
+
+                <div class="about-grid">
+
+
+                    <div class="card about-main">
+
+
+                        <p>
+
+                            I am a Machine Learning Engineer
+                            passionate about developing
+                            intelligent solutions that transform
+                            real-world problems into practical
+                            AI applications.
+
+                        </p>
+
+
+                        <p>
+
+                            My interests include Machine Learning,
+                            Deep Learning, Computer Vision,
+                            Natural Language Processing,
+                            and Generative AI.
+
+                        </p>
+
+
+                        <p>
+
+                            I work across the complete machine
+                            learning lifecycle, including data
+                            preprocessing, feature engineering,
+                            model development, evaluation,
+                            optimization, and deployment.
+
+                        </p>
+
+
+                        <p>
+
+                            My goal is to build reliable,
+                            scalable, and impactful AI systems
+                            that solve meaningful problems.
+
+                        </p>
+
+
+                    </div>
+
+
+                    <div class="card">
+
+
+                        <div class="about-list">
+
+
+                            <div>
+
+                                <i class="fas fa-brain"></i>
+
+                                Machine Learning
+
+                            </div>
+
+
+                            <div>
+
+                                <i class="fas fa-network-wired"></i>
+
+                                Deep Learning
+
+                            </div>
+
+
+                            <div>
+
+                                <i class="fas fa-eye"></i>
+
+                                Computer Vision
+
+                            </div>
+
+
+                            <div>
+
+                                <i class="fas fa-language"></i>
+
+                                NLP
+
+                            </div>
+
+
+                            <div>
+
+                                <i class="fas fa-wand-magic-sparkles"></i>
+
+                                Generative AI
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             EDUCATION
+        ========================================== -->
+
+        <section id="education">
+
+            <div class="container">
+
+
+                <div class="section-title">
+
+                    <span>
+                        Education
+                    </span>
+
+                    <h2>
+                        Academic Background
+                    </h2>
+
+                </div>
+
+
+                <div class="card education-card">
+
+
+                    <div class="institution">
+
+                        The Egyptian E-Learning
+                        University (EELU)
+
+                    </div>
+
+
+                    <h3>
+
+                        Faculty of Computers
+                        and Information
+
+                    </h3>
+
+
+                    <div class="date">
+
+                        Expected: 2027
+
+                    </div>
+
+
+                    <p style="margin-top:15px;">
+
+                        Bachelor's Degree in
+                        Computers and Information
+
+                    </p>
+
+
+                    <p>
+
+                        Specialization:
+                        <strong>
+                            Artificial Intelligence
+                        </strong>
+
+                    </p>
+
+
+                    <div class="tags">
+
+
+                        <span class="tag">
+                            AI
+                        </span>
+
+
+                        <span class="tag">
+                            Machine Learning
+                        </span>
+
+
+                        <span class="tag">
+                            Deep Learning
+                        </span>
+
+
+                        <span class="tag">
+                            Neural Networks
+                        </span>
+
+
+                        <span class="tag">
+                            Data Structures
+                        </span>
+
+
+                        <span class="tag">
+                            Algorithms
+                        </span>
+
+
+                        <span class="tag">
+                            Linear Algebra
+                        </span>
+
+
+                        <span class="tag">
+                            Probability & Statistics
+                        </span>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             TRAINING
+        ========================================== -->
+
+        <section id="training">
+
+            <div class="container">
+
+
+                <div class="section-title">
+
+                    <span>
+                        Training
+                    </span>
+
+                    <h2>
+                        Programs & Training
+                    </h2>
+
+                </div>
+
+
+                <div class="training-grid">
+
+
+                    <div class="card training-card">
+
+
+                        <h3>
+                            DEPI Initiative
+                        </h3>
+
+
+                        <div class="provider">
+
+                            Microsoft Machine
+                            Learning Engineer Diploma
+
+                        </div>
+
+
+                        <p>
+
+                            Professional training focused
+                            on Machine Learning engineering,
+                            AI development, and practical
+                            applications.
+
+                        </p>
+
+
+                        <span class="badge progress">
+
+                            In Progress
+
+                        </span>
+
+
+                    </div>
+
+
+
+                    <div class="card training-card">
+
+
+                        <h3>
+                            NVIDIA DLI Program
+                        </h3>
+
+
+                        <div class="provider">
+
+                            Information Technology
+                            Institute (ITI)
+
+                        </div>
+
+
+                        <p>
+
+                            35-hour intensive program focused
+                            on Generative AI, LLM Applications
+                            with Prompt Engineering, and RAG.
+
+                        </p>
+
+
+                        <span class="badge completed">
+
+                            Completed
+
+                        </span>
+
+
+                    </div>
+
+
+
+                    <div class="card training-card">
+
+
+                        <h3>
+
+                            Artificial Intelligence
+                            Fundamentals
+
+                        </h3>
+
+
+                        <div class="provider">
+
+                            IBM SkillsBuild
+
+                        </div>
+
+
+                        <p>
+
+                            Fundamental concepts and
+                            applications of Artificial
+                            Intelligence.
+
+                        </p>
+
+
+                        <span class="badge completed">
+
+                            Completed
+
+                        </span>
+
+
+                    </div>
+
+
+
+                    <div class="card training-card">
+
+
+                        <h3>
+
+                            AWS AI Practitioner Challenge
+
+                        </h3>
+
+
+                        <div class="provider">
+
+                            Udacity / AWS
+
+                        </div>
+
+
+                        <p>
+
+                            Training and practical learning
+                            related to Artificial Intelligence
+                            and AWS.
+
+                        </p>
+
+
+                        <span class="badge completed">
+
+                            Completed
+
+                        </span>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             SKILLS
+        ========================================== -->
+
+        <section id="skills">
+
+            <div class="container">
+
+
+                <div class="section-title">
+
+                    <span>
+                        Skills
+                    </span>
+
+                    <h2>
+                        Technical Skills
+                    </h2>
+
+                </div>
+
+
+                <div class="skills-grid">
+
+
+                    <div class="card skill-card">
+
+
+                        <h3>
+
+                            <i class="fas fa-brain"></i>
+
+                            AI & Machine Learning
+
+                        </h3>
+
+
+                        <div class="tags">
+
+
+                            <span class="tag">
+                                AI
+                            </span>
+
+
+                            <span class="tag">
+                                Machine Learning
+                            </span>
+
+
+                            <span class="tag">
+                                Deep Learning
+                            </span>
+
+
+                            <span class="tag">
+                                Neural Networks
+                            </span>
+
+
+                            <span class="tag">
+                                Regression
+                            </span>
+
+
+                            <span class="tag">
+                                Classification
+                            </span>
+
+
+                            <span class="tag">
+                                Feature Engineering
+                            </span>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="card skill-card">
+
+
+                        <h3>
+
+                            <i class="fas fa-eye"></i>
+
+                            Vision & NLP
+
+                        </h3>
+
+
+                        <div class="tags">
+
+
+                            <span class="tag">
+                                Computer Vision
+                            </span>
+
+
+                            <span class="tag">
+                                NLP
+                            </span>
+
+
+                            <span class="tag">
+                                Transformers
+                            </span>
+
+
+                            <span class="tag">
+                                Generative AI
+                            </span>
+
+
+                            <span class="tag">
+                                LLMs
+                            </span>
+
+
+                            <span class="tag">
+                                Prompt Engineering
+                            </span>
+
+
+                            <span class="tag">
+                                RAG
+                            </span>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="card skill-card">
+
+
+                        <h3>
+
+                            <i class="fas fa-code"></i>
+
+                            Programming & Data
+
+                        </h3>
+
+
+                        <div class="tags">
+
+
+                            <span class="tag">
+                                Python
+                            </span>
+
+
+                            <span class="tag">
+                                SQL
+                            </span>
+
+
+                            <span class="tag">
+                                NumPy
+                            </span>
+
+
+                            <span class="tag">
+                                Pandas
+                            </span>
+
+
+                            <span class="tag">
+                                Scikit-learn
+                            </span>
+
+
+                            <span class="tag">
+                                Matplotlib
+                            </span>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="card skill-card">
+
+
+                        <h3>
+
+                            <i class="fas fa-tools"></i>
+
+                            Tools & Platforms
+
+                        </h3>
+
+
+                        <div class="tags">
+
+
+                            <span class="tag">
+                                Git
+                            </span>
+
+
+                            <span class="tag">
+                                GitHub
+                            </span>
+
+
+                            <span class="tag">
+                                Jupyter
+                            </span>
+
+
+                            <span class="tag">
+                                Google Colab
+                            </span>
+
+
+                            <span class="tag">
+                                Streamlit
+                            </span>
+
+
+                            <span class="tag">
+                                VS Code
+                            </span>
+
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             PROJECTS
+        ========================================== -->
+
+        <section id="projects">
+
+            <div class="container">
+
+
+                <div class="section-title">
+
+                    <span>
+                        Projects
+                    </span>
+
+                    <h2>
+                        Featured Projects
+                    </h2>
+
+                </div>
+
+
+                <div class="projects-grid">
+
+
+                    <!-- PROJECT 1 -->
+
+                    <div class="card project-card">
+
+
+                        <div class="project-icon">
+
+                            <i class="fas fa-robot"></i>
+
+                        </div>
+
+
+                        <h3>
+
+                            Autism Spectrum
+                            Disorder Prediction
+
+                        </h3>
+
+
+                        <p>
+
+                            A Machine Learning project
+                            focused on predicting Autism
+                            Spectrum Disorder using data
+                            preprocessing, machine learning
+                            models, and an interactive
+                            Streamlit interface.
+
+                        </p>
+
+
+                        <div class="tags">
+
+
+                            <span class="tag">
+                                Python
+                            </span>
+
+
+                            <span class="tag">
+                                Scikit-learn
+                            </span>
+
+
+                            <span class="tag">
+                                Pandas
+                            </span>
+
+
+                            <span class="tag">
+                                Streamlit
+                            </span>
+
+
+                        </div>
+
+
+                        <div
+                            class="project-footer"
+                            style="margin-top:20px;">
+
+
+                            <a
+                                href="https://github.com/Mostafa-Mahmoud-Osman-Sdeak/NTI-Machine-Learning-Final-Project.git"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="btn btn-outline">
+
+                                <i class="fab fa-github"></i>
+
+                                View on GitHub
+
+                            </a>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- PROJECT 2 -->
+
+                    <div class="card project-card">
+
+
+                        <div class="project-icon">
+
+                            <i class="fas fa-gamepad"></i>
+
+                        </div>
+
+
+                        <h3>
+
+                            Tic-Tac-Toe AI Agent
+
+                        </h3>
+
+
+                        <p>
+
+                            An AI-powered Tic-Tac-Toe
+                            game using the Minimax
+                            algorithm and a graphical
+                            interface built with Tkinter.
+
+                        </p>
+
+
+                        <div class="tags">
+
+
+                            <span class="tag">
+                                Python
+                            </span>
+
+
+                            <span class="tag">
+                                Minimax
+                            </span>
+
+
+                            <span class="tag">
+                                Tkinter
+                            </span>
+
+
+                            <span class="tag">
+                                AI
+                            </span>
+
+
+                        </div>
+
+
+                        <div
+                            class="project-footer"
+                            style="margin-top:20px;">
+
+
+                            <a
+                                href="https://github.com/Mostafa-Mahmoud-Osman-Sdeak"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="btn btn-outline">
+
+                                <i class="fab fa-github"></i>
+
+                                View on GitHub
+
+                            </a>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             CERTIFICATES
+        ========================================== -->
+
+        <section id="certificates">
+
+            <div class="container">
+
+
+                <div class="section-title">
+
+                    <span>
+                        Certificates
+                    </span>
+
+                    <h2>
+                        Certifications & Achievements
+                    </h2>
+
+                </div>
+
+
+                <div
+                    class="certificates-grid"
+                    id="certificatesGrid">
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             EXPERIENCE
+        ========================================== -->
+
+        <section id="experience">
+
+            <div class="container">
+
+
+                <div class="section-title">
+
+                    <span>
+                        Experience
+                    </span>
+
+                    <h2>
+                        Practical Experience
+                    </h2>
+
+                </div>
+
+
+                <div class="experience">
+
+
+                    <div
+                        class="card experience-card">
+
+
+                        <h3>
+
+                            Machine Learning &
+                            AI Development
+
+                        </h3>
+
+
+                        <div class="role">
+
+                            Applied Projects &
+                            Practical Training
+
+                        </div>
+
+
+                        <ul>
+
+
+                            <li>
+
+                                Developed end-to-end
+                                Machine Learning pipelines.
+
+                            </li>
+
+
+                            <li>
+
+                                Worked with classification
+                                models and hyperparameter
+                                optimization.
+
+                            </li>
+
+
+                            <li>
+
+                                Built LLM applications
+                                using prompt engineering
+                                and RAG concepts.
+
+                            </li>
+
+
+                            <li>
+
+                                Deployed applications
+                                using Streamlit and managed
+                                projects with Git/GitHub.
+
+                            </li>
+
+
+                        </ul>
+
+
+                    </div>
+
+
+
+                    <div
+                        class="card experience-card">
+
+
+                        <h3>
+
+                            Practical Training
+                            Programs
+
+                        </h3>
+
+
+                        <div class="role">
+
+                            AI & Machine Learning
+
+                        </div>
+
+
+                        <ul>
+
+
+                            <li>
+
+                                DEPI Microsoft
+                                Machine Learning Track
+
+                            </li>
+
+
+                            <li>
+
+                                NVIDIA DLI Summer
+                                Training Program –
+                                Generative AI & Deep
+                                Learning – 35 Hours
+
+                            </li>
+
+
+                            <li>
+
+                                NTI AI Ambassadors Program
+
+                            </li>
+
+
+                            <li>
+
+                                Google Data Analytics
+                                Professional Specialization
+
+                            </li>
+
+
+                        </ul>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             CONTACT
+        ========================================== -->
+
+        <section id="contact">
+
+            <div class="container">
+
+
+                <div class="section-title">
+
+                    <span>
+                        Contact
+                    </span>
+
+                    <h2>
+                        Let's Connect
+                    </h2>
+
+                </div>
+
+
+                <div class="contact-grid">
+
+
+                    <!-- CONTACT INFORMATION -->
+
+                    <div class="contact-info">
+
+
+                        <!-- Email -->
+
+                        <a
+                            href="mailto:mostafa.mahmoud.osman.sdeak@gmail.com"
+                            class="contact-item">
+
+
+                            <i class="fas fa-envelope"></i>
+
+
+                            <div>
+
+                                <small>
+                                    Email
+                                </small>
+
+                                <strong>
+                                    mostafa.mahmoud.osman.sdeak@gmail.com
+                                </strong>
+
+                            </div>
+
+
+                        </a>
+
+
+
+                        <!-- CORRECT LINKEDIN -->
+
+                        <a
+                            href="https://www.linkedin.com/in/mostafa-mahmoud-osman-426b7933b/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="contact-item">
+
+
+                            <i class="fab fa-linkedin"></i>
+
+
+                            <div>
+
+                                <small>
+                                    LinkedIn
+                                </small>
+
+                                <strong>
+                                    Mostafa Mahmoud Osman
+                                </strong>
+
+                            </div>
+
+
+                        </a>
+
+
+
+                        <!-- GitHub -->
+
+                        <a
+                            href="https://github.com/Mostafa-Mahmoud-Osman-Sdeak"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="contact-item">
+
+
+                            <i class="fab fa-github"></i>
+
+
+                            <div>
+
+                                <small>
+                                    GitHub
+                                </small>
+
+                                <strong>
+                                    Mostafa-Mahmoud-Osman-Sdeak
+                                </strong>
+
+                            </div>
+
+
+                        </a>
+
+
+                    </div>
+
+
+
+                    <!-- CONTACT FORM -->
+
+                    <div class="card">
+
+
+                        <form
+                            class="contact-form"
+                            id="contactForm">
+
+
+                            <div class="form-group">
+
+
+                                <label for="name">
+                                    Name
+                                </label>
+
+
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    placeholder="Your Name"
+                                    required>
+
+
+                            </div>
+
+
+
+                            <div class="form-group">
+
+
+                                <label for="email">
+                                    Email
+                                </label>
+
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="Your Email"
+                                    required>
+
+
+                            </div>
+
+
+
+                            <div class="form-group">
+
+
+                                <label for="subject">
+                                    Subject
+                                </label>
+
+
+                                <input
+                                    type="text"
+                                    id="subject"
+                                    name="subject"
+                                    placeholder="Subject"
+                                    required>
+
+
+                            </div>
+
+
+
+                            <div class="form-group">
+
+
+                                <label for="message">
+                                    Message
+                                </label>
+
+
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    placeholder="Write your message..."
+                                    required>
+                                </textarea>
+
+
+                            </div>
+
+
+
+                            <button
+                                type="submit"
+                                class="btn btn-primary">
+
+
+                                <i class="fas fa-paper-plane"></i>
+
+                                Send Message
+
+
+                            </button>
+
+
+                        </form>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer>
+
+        <div class="container">
+
+            © 2026 Mostafa Mahmoud Osman Sdeak.
+            All Rights Reserved.
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================================
+         CERTIFICATE MODAL
+    ========================================== -->
+
+    <div
+        class="modal"
+        id="certificateModal">
+
+
+        <div class="modal-content">
+
+
+            <button
+                class="modal-close"
+                onclick="closeModal()">
+
+                <i class="fas fa-times"></i>
+
+            </button>
+
+
+            <img
+                id="modalImage"
+                src=""
+                alt="Certificate">
+
+
+            <div class="zoom-controls">
+
+
+                <button onclick="zoomOut()">
+
+                    <i class="fas fa-minus"></i>
+
+                </button>
+
+
+                <button onclick="resetZoom()">
+
+                    <i class="fas fa-expand"></i>
+
+                </button>
+
+
+                <button onclick="zoomIn()">
+
+                    <i class="fas fa-plus"></i>
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script>
+
+
+        /* =========================================
+           PROFILE IMAGE
+           
+           IMPORTANT:
+           The first image is the exact file
+           that exists in your photo_me folder.
+        ========================================== */
+
+        const profileImage =
+            document.getElementById(
+                "profileImage"
+            );
+
+
+        const profileImages = [
+
+            "photo_me/IMG-20260626-WA0083 (1).jpg",
+
+            "photo_me/IMG-20260626-WA0103 (1).jpg"
+
+        ];
+
+
+        let profileIndex = 0;
+
+
+        profileImage.onerror = function () {
+
+
+            profileIndex++;
+
+
+            if (
+                profileIndex <
+                profileImages.length
+            ) {
+
+
+                this.src =
+                    profileImages[
+                        profileIndex
+                    ];
+
+
+            } else {
+
+
+                /*
+                    If both images fail,
+                    hide broken image.
+                */
+
+                this.style.display =
+                    "none";
+
+            }
+
+        };
+
+
+
+        /* =========================================
+           CERTIFICATES
+        ========================================== */
+
+        const certificates = [
+
+
+            {
+                title:
+                    "CCNA: Switching, Routing, and Wireless Essentials",
+
+                provider:
+                    "Cisco Networking Academy / EELU",
+
+                date:
+                    "Feb 2026",
+
+                file:
+                    "photo_5902296667401162583_x (1)",
+
+                num:
+                    1
+            },
+
+
+            {
+                title:
+                    "Introduction to Deep Learning",
+
+                provider:
+                    "Mahara-Tech / ITI",
+
+                date:
+                    "Jan 2026",
+
+                file:
+                    "photo_5902296667401162580_x",
+
+                num:
+                    2
+            },
+
+
+            {
+                title:
+                    "Overview of AI",
+
+                provider:
+                    "Huawei ICT Academy",
+
+                date:
+                    "Sept 2026",
+
+                file:
+                    "photo_5902296667401162594_x",
+
+                num:
+                    3
+            },
+
+
+            {
+                title:
+                    "Human Research - Basic Course",
+
+                provider:
+                    "CITI Program / MIT Affiliates",
+
+                date:
+                    "Sept 2026",
+
+                file:
+                    "photo_5902296667401162593_x",
+
+                num:
+                    4
+            },
+
+
+            {
+                title:
+                    "Introduction To Programming Using Python",
+
+                provider:
+                    "Microsoft / Care Egypt",
+
+                date:
+                    "Aug 2026",
+
+                file:
+                    "photo_5902296667401162592_x",
+
+                num:
+                    5
+            },
+
+
+            {
+                title:
+                    "AI Beginner",
+
+                provider:
+                    "MCIT / Fast Lane / Microsoft",
+
+                date:
+                    "March 2026",
+
+                file:
+                    "photo_5902296667401162591_x",
+
+                num:
+                    6
+            },
+
+
+            {
+                title:
+                    "Generative AI Summer Training (35 hrs)",
+
+                provider:
+                    "NVIDIA DLI / ITI",
+
+                date:
+                    "March 2026",
+
+                file:
+                    "photo_5902296667401162590_x",
+
+                num:
+                    7
+            },
+
+
+            {
+                title:
+                    "Artificial Intelligence Fundamentals",
+
+                provider:
+                    "IBM SkillsBuild",
+
+                date:
+                    "March 2026",
+
+                file:
+                    "photo_5902296667401162589_x",
+
+                num:
+                    8
+            },
+
+
+            {
+                title:
+                    "Build with AI: MASR Edition",
+
+                provider:
+                    "Google for Developers / ITI",
+
+                date:
+                    "2026",
+
+                file:
+                    "photo_5902296667401162588_x",
+
+                num:
+                    9
+            },
+
+
+            {
+                title:
+                    "Google Data Analytics Professional Certificate",
+
+                provider:
+                    "Google / Coursera",
+
+                date:
+                    "May 2026",
+
+                file:
+                    "photo_5902296667401162587_x",
+
+                num:
+                    10
+            },
+
+
+            {
+                title:
+                    "AWS AI Practitioner Challenge",
+
+                provider:
+                    "Udacity / AWS",
+
+                date:
+                    "May 2026",
+
+                file:
+                    "photo_5902296667401162586_y",
+
+                num:
+                    11
+            },
+
+
+            {
+                title:
+                    "CCNA: Introduction to Networks",
+
+                provider:
+                    "Cisco Networking Academy / EELU",
+
+                date:
+                    "May 2025",
+
+                file:
+                    "photo_5902296667401162585_x (1)",
+
+                num:
+                    12
+            },
+
+
+            {
+                title:
+                    "AI for All: From Basics to GenAI Practice",
+
+                provider:
+                    "NVIDIA Academy",
+
+                date:
+                    "February 2026",
+
+                file:
+                    "photo_5902296667401162584_x (1)",
+
+                num:
+                    13
+            },
+
+
+            {
+                title:
+                    "Getting Started with Deep Learning",
+
+                provider:
+                    "NVIDIA",
+
+                date:
+                    "August 2025",
+
+                file:
+                    "photo_5902296667401162582_x",
+
+                num:
+                    14
+            },
+
+
+            {
+                title:
+                    "Artificial Intelligence Ambassadors Program",
+
+                provider:
+                    "NTI / MCIT",
+
+                date:
+                    "2026",
+
+                file:
+                    "photo_5902296667401162581_x",
+
+                num:
+                    15
+            },
+
+
+            {
+                title:
+                    "Python Programming Basics",
+
+                provider:
+                    "Mahara-Tech / ITI AI Academy",
+
+                date:
+                    "January 2026",
+
+                file:
+                    "photo_5902296667401162579_y",
+
+                num:
+                    16
+            },
+
+
+            {
+                title:
+                    "Advanced Deep Learning Seminar",
+
+                provider:
+                    "Mahara-Tech / ITI",
+
+                date:
+                    "January 2026",
+
+                file:
+                    "photo_5902296667401162578_x",
+
+                num:
+                    17
+            }
+
+
+        ];
+
+
+
+        /* =========================================
+           RENDER CERTIFICATES
+        ========================================== */
+
+        const certificatesGrid =
+            document.getElementById(
+                "certificatesGrid"
+            );
+
+
+        certificates.forEach(
+            function(cert) {
+
+
+                const card =
+                    document.createElement(
+                        "div"
+                    );
+
+
+                card.className =
+                    "certificate-card";
+
+
+                const image =
+                    document.createElement(
+                        "img"
+                    );
+
+
+                image.className =
+                    "certificate-image";
+
+
+                image.alt =
+                    cert.title;
+
+
+                /*
+                    Try multiple filenames.
+                */
+
+                const possibleImages = [
+
+
+                    `photo_cer/${cert.file}.jpg`,
+
+
+                    `photo_cer/${cert.file}.png`,
+
+
+                    `photo_cer/${cert.num}.jpg`,
+
+
+                    `photo_cer/${cert.num}.png`,
+
+
+                    `./photo_cer/${cert.num}.jpg`
+
+
+                ];
+
+
+                let imageIndex = 0;
+
+
+                image.src =
+                    possibleImages[
+                        imageIndex
+                    ];
+
+
+                image.onerror =
+                    function() {
+
+
+                        imageIndex++;
+
+
+                        if (
+                            imageIndex <
+                            possibleImages.length
+                        ) {
+
+
+                            this.src =
+                                possibleImages[
+                                    imageIndex
+                                ];
+
+
+                        } else {
+
+
+                            /*
+                                Placeholder instead
+                                of broken image.
+                            */
+
+                            this.removeAttribute(
+                                "src"
+                            );
+
+
+                            this.style.minHeight =
+                                "180px";
+
+
+                            this.style.display =
+                                "flex";
+
+
+                            this.style.alignItems =
+                                "center";
+
+
+                            this.style.justifyContent =
+                                "center";
+
+                        }
+
+                    };
+
+
+
+                const info =
+                    document.createElement(
+                        "div"
+                    );
+
+
+                info.className =
+                    "certificate-info";
+
+
+                info.innerHTML = `
+
+                    <h3>
+                        ${cert.title}
+                    </h3>
+
+                    <p>
+                        ${cert.provider}
+                    </p>
+
+                    <p>
+                        ${cert.date}
+                    </p>
+
+                `;
+
+
+
+                card.appendChild(
+                    image
+                );
+
+
+                card.appendChild(
+                    info
+                );
+
+
+
+                card.addEventListener(
+                    "click",
+                    function() {
+
+
+                        if (
+                            image.src &&
+                            image.src !==
+                            window.location.href
+                        ) {
+
+
+                            openModal(
+                                image.src,
+                                cert.title
+                            );
+
+                        }
+
+                    }
+                );
+
+
+
+                certificatesGrid.appendChild(
+                    card
+                );
+
+
+            }
+        );
+
+
+
+        /* =========================================
+           CERTIFICATE MODAL
+        ========================================== */
+
+        const modal =
+            document.getElementById(
+                "certificateModal"
+            );
+
+
+        const modalImage =
+            document.getElementById(
+                "modalImage"
+            );
+
+
+        let currentZoom = 1;
+
+
+
+        function openModal(
+            imageSrc,
+            title
+        ) {
+
+
+            modal.classList.add(
+                "active"
+            );
+
+
+            modalImage.src =
+                imageSrc;
+
+
+            modalImage.alt =
+                title;
+
+
+            currentZoom = 1;
+
+
+            modalImage.style.transform =
+                "scale(1)";
+
+
+            document.body.style.overflow =
+                "hidden";
+
+        }
+
+
+
+        function closeModal() {
+
+
+            modal.classList.remove(
+                "active"
+            );
+
+
+            document.body.style.overflow =
+                "";
+
+        }
+
+
+
+        function zoomIn() {
+
+
+            currentZoom += 0.2;
+
+
+            modalImage.style.transform =
+                `scale(${currentZoom})`;
+
+        }
+
+
+
+        function zoomOut() {
+
+
+            currentZoom =
+                Math.max(
+                    0.5,
+                    currentZoom - 0.2
+                );
+
+
+            modalImage.style.transform =
+                `scale(${currentZoom})`;
+
+        }
+
+
+
+        function resetZoom() {
+
+
+            currentZoom = 1;
+
+
+            modalImage.style.transform =
+                "scale(1)";
+
+        }
+
+
+
+        /* Close modal by clicking background */
+
+        modal.addEventListener(
+            "click",
+            function(event) {
+
+
+                if (
+                    event.target === modal
+                ) {
+
+
+                    closeModal();
+
+                }
+
+            }
+        );
+
+
+
+        /* Close modal with ESC */
+
+        document.addEventListener(
+            "keydown",
+            function(event) {
+
+
+                if (
+                    event.key ===
+                    "Escape"
+                ) {
+
+
+                    closeModal();
+
+                }
+
+            }
+        );
+
+
+
+        /* =========================================
+           MOBILE MENU
+        ========================================== */
+
+        const menuToggle =
+            document.getElementById(
+                "menuToggle"
+            );
+
+
+        const navLinks =
+            document.getElementById(
+                "navLinks"
+            );
+
+
+        menuToggle.addEventListener(
+            "click",
+            function() {
+
+
+                navLinks.classList.toggle(
+                    "active"
+                );
+
+
+            }
+        );
+
+
+
+        /* Close mobile menu after clicking link */
+
+        document
+            .querySelectorAll(
+                ".nav-links a"
+            )
+            .forEach(
+                function(link) {
+
+
+                    link.addEventListener(
+                        "click",
+                        function() {
+
+
+                            navLinks.classList.remove(
+                                "active"
+                            );
+
+
+                        }
+                    );
+
+
+                }
+            );
+
+
+
+        /* =========================================
+           CONTACT FORM
+        ========================================== */
+
+        const contactForm =
+            document.getElementById(
+                "contactForm"
+            );
+
+
+        contactForm.addEventListener(
+            "submit",
+            function(event) {
+
+
+                event.preventDefault();
+
+
+                const name =
+                    document.getElementById(
+                        "name"
+                    ).value;
+
+
+                const email =
+                    document.getElementById(
+                        "email"
+                    ).value;
+
+
+                const subject =
+                    document.getElementById(
+                        "subject"
+                    ).value;
+
+
+                const message =
+                    document.getElementById(
+                        "message"
+                    ).value;
+
+
+                const receiver =
+                    "mostafa.mahmoud.osman.sdeak@gmail.com";
+
+
+                const mailSubject =
+                    encodeURIComponent(
+                        subject
+                    );
+
+
+                const mailBody =
+                    encodeURIComponent(
+
+                        `Name: ${name}
+
+Email: ${email}
+
+Message:
+
+${message}`
+
+                    );
+
+
+                window.location.href =
+                    `mailto:${receiver}?subject=${mailSubject}&body=${mailBody}`;
+
+
+            }
+        );
+
+
+    </script>
+
+
+</body>
+
+</html>
